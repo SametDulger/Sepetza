@@ -2,7 +2,7 @@
 
 A modern, secure, and user-friendly e-commerce platform built with .NET 9 Web API backend and React TypeScript frontend.
 
-![Homepage](screenshots/homepage1.png)
+![Homepage](Screenshots/homepage1.png)
 
 ## ✨ Features
 
@@ -15,7 +15,7 @@ A modern, secure, and user-friendly e-commerce platform built with .NET 9 Web AP
 - **Product Reviews**: Rate and review products
 - **Responsive Design**: Mobile and desktop compatible
 
-![Products](screenshots/products.png)
+![Products](Screenshots/products.png)
 
 ### 🛒 Shopping Experience
 - **Category Navigation**: Easy browsing through product categories
@@ -23,9 +23,9 @@ A modern, secure, and user-friendly e-commerce platform built with .NET 9 Web AP
 - **Shopping Cart**: Seamless cart management with real-time updates
 - **User Profile**: Complete profile management system
 
-![Categories](screenshots/categories.png)
+![Categories](Screenshots/categories.png)
 
-![Cart](screenshots/cart.png)
+![Cart](Screenshots/cart.png)
 
 ### 👨‍💼 Admin Panel
 - **Dashboard**: Sales statistics and overview
@@ -35,15 +35,15 @@ A modern, secure, and user-friendly e-commerce platform built with .NET 9 Web AP
 - **Order Management**: Order tracking and status updates
 - **File Upload**: Secure file handling for product images
 
-![Admin Dashboard](screenshots/admindashboard.png)
+![Admin Dashboard](Screenshots/admindashboard.png)
 
-![Product Management](screenshots/productmanagement.png)
+![Product Management](Screenshots/productmanagement.png)
 
-![Category Management](screenshots/categorymanagement.png)
+![Category Management](Screenshots/categorymanagement.png)
 
-![User Management](screenshots/usermanagement.png)
+![User Management](Screenshots/usermanagement.png)
 
-![Order Management](screenshots/ordermanagement.png)
+![Order Management](Screenshots/ordermanagement.png)
 
 ## 🛠️ Technologies
 
@@ -99,7 +99,7 @@ Sepetza/
 │   │   └── utils/           # Utility Functions
 │   ├── public/              # Static Assets
 │   └── package.json
-├── screenshots/             # Application Screenshots
+├── Screenshots/             # Application Screenshots
 └── README.md
 ```
 
@@ -143,22 +143,22 @@ The system automatically creates an admin account on first run:
 
 Access admin panel at: `http://localhost:3000/admin`
 
-![Admin Login](screenshots/adminlogin.png)
+![Admin Login](Screenshots/adminlogin.png)
 
 ## 🖥️ User Interface
 
 ### Authentication
 The platform provides secure user authentication with modern UI:
 
-![User Login](screenshots/userlogin.png)
-![User Registration](screenshots/register.png)
+![User Login](Screenshots/userlogin.png)
+![User Registration](Screenshots/register.png)
 
 ### User Features
 Complete user experience with profile management, favorites, and order history:
 
-![User Profile](screenshots/userprofile.png)
-![Favorites](screenshots/favorites.png)
-![Orders](screenshots/orders.png)
+![User Profile](Screenshots/userprofile.png)
+![Favorites](Screenshots/favorites.png)
+![Orders](Screenshots/orders.png)
 
 ## 🗄️ Database
 
@@ -279,7 +279,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 📞 Contact
 
 For questions about the project:
-- Email: info@sepetza.com
+
 - GitHub Issues: [Issues](https://github.com/SametDulger/Sepetza/issues)
 
 ## 🔄 Version History
