@@ -1,0 +1,93 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Entity Framework
+Migrations/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish profiles
+*.pubxml
+*.publishproj
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Package restore
+**/packages/*
+!**/packages/build/
+
+# Environment files
+.env
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+!appsettings.Production.json
+
+# Logs
+*.log
+logs/
+
+# Cache files
+*.cache
+*.tmp
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Coverage reports
+coverage/
+*.lcov 

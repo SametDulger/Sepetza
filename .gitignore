@@ -1,0 +1,98 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+*.exe
+*.log
+*.tmp
+*.temp
+*.manifest
+*.application
+*.msi
+*.msp
+*.msm
+*.cab
+*.wixpdb
+*.wixobj
+*.publishsettings
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+out/
+publish/
+
+# Package files
+*.nupkg
+*.snupkg
+
+# Visual Studio
+.vs/
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Rider
+.idea/
+*.sln.iml
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/ 
