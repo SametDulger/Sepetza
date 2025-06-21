@@ -24,17 +24,23 @@ export const getImageUrl = (imageUrl?: string): string => {
 
 /**
  * Ürün için ana resim URL'sini getirir
- * @param productImages - Ürün resimleri array'i
+ * @param productImages - Ürün resimleri array'i (string[] veya { imageUrl: string; isMain?: boolean }[])
  * @returns Ana resim URL'si
  */
-export const getMainProductImage = (productImages?: { imageUrl: string; isMain?: boolean }[]): string => {
+export const getMainProductImage = (productImages?: string[] | { imageUrl: string; isMain?: boolean }[]): string => {
   if (!productImages || productImages.length === 0) {
     return '/product-image-placeholder.jpg';
   }
   
-  // Ana resmi bul
-  const mainImage = productImages.find(img => img.isMain);
-  const imageUrl = mainImage?.imageUrl || productImages[0]?.imageUrl;
+  // Eğer string array ise
+  if (typeof productImages[0] === 'string') {
+    return getImageUrl(productImages[0] as string);
+  }
+  
+  // Eğer object array ise
+  const imageObjects = productImages as { imageUrl: string; isMain?: boolean }[];
+  const mainImage = imageObjects.find(img => img.isMain);
+  const imageUrl = mainImage?.imageUrl || imageObjects[0]?.imageUrl;
   
   return getImageUrl(imageUrl);
 }; 

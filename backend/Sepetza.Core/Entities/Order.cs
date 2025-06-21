@@ -1,3 +1,5 @@
+using System;
+
 namespace Sepetza.Core.Entities;
 
 public class Order : BaseEntity

@@ -20,6 +20,12 @@ bld/
 *.userosscache
 *.sln.docstates
 *.userprefs
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
 
 # Database files
 *.db
@@ -27,6 +33,9 @@ bld/
 *.sqlite3
 *.db-shm
 *.db-wal
+*.mdf
+*.ldf
+*.ndf
 
 # Entity Framework
 Migrations/
@@ -37,19 +46,6 @@ Migrations/
 *.user
 *.userosscache
 *.sln.docstates
-
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
 
 # .NET Core
 project.lock.json
@@ -75,6 +71,9 @@ appsettings.*.json
 !appsettings.json
 !appsettings.Development.json
 !appsettings.Production.json
+local.settings.json
+secrets.json
+appsettings.Local.json
 
 # Logs
 *.log
@@ -83,6 +82,7 @@ logs/
 # Cache files
 *.cache
 *.tmp
+*.temp
 
 # Test results
 [Tt]est[Rr]esult*/
@@ -90,4 +90,84 @@ logs/
 
 # Coverage reports
 coverage/
-*.lcov 
+*.lcov
+
+# Security
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*.cer
+*.der
+*.p7b
+*.p7c
+*.p7s
+*.p8
+*.jks
+*.keystore
+*.truststore
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# IDE
+.idea/
+*.sln.iml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Performance and profiling
+*.perf
+*.prof
+*.trace
+
+# Crash dumps
+*.dmp
+*.mdmp
+
+# Memory dumps
+*.hprof
+
+# Application specific
+*.pid
+*.port
+*.sock
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Local development
+.local/
+local/
+
+# IIS
+*.iislog
+
+# ASP.NET
+*.aspx.cs
+*.aspx.designer.cs
+*.aspx.resx
+*.ashx.cs
+*.ashx.resx
+*.asmx.cs
+*.asmx.resx
+*.svc.cs
+*.svc.resx
+
+# Web.config transforms
+Web.Debug.config
+Web.Release.config
+Web.config
+!Web.config
+
+# Connection strings
+connectionStrings.config 

@@ -173,8 +173,8 @@ export const ProductDetail: React.FC = () => {
     );
   }
 
-  const images = product.productImages && product.productImages.length > 0 
-    ? product.productImages 
+  const images = product.images && product.images.length > 0 
+    ? product.images.map(img => ({ imageUrl: img, altText: product.name }))
     : [{ imageUrl: 'product-image-placeholder.jpg', altText: product.name }];
 
   return (
