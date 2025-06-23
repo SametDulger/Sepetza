@@ -68,6 +68,7 @@ A modern, secure, and user-friendly e-commerce platform built with .NET 9 Web AP
 - **Icons**: Heroicons
 - **Build Tool**: Create React App
 
+
 ## 📁 Project Structure
 
 ```
