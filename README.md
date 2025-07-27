@@ -42,7 +42,7 @@ Modern ve kullanıcı dostu bir e-ticaret platformu. React ve .NET Core kullanı
 - **AutoMapper** - Object mapping
 
 ### Frontend
-- **React 19** - UI framework
+- **React 17** - UI framework
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
 - **React Router** - Routing
