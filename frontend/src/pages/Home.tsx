@@ -365,7 +365,7 @@ export const Home: React.FC = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <img
-                      src={getMainProductImage(product.productImages)}
+                      src={getMainProductImage(product.images)}
                       alt={product.name}
                       className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
