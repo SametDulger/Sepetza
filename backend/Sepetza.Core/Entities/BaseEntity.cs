@@ -1,3 +1,5 @@
+using System;
+
 namespace Sepetza.Core.Entities;
 
 // Base entity for all database models

@@ -1,3 +1,5 @@
+using System;
+
 namespace Sepetza.Core.Entities;
 
 // User entity for authentication and profile

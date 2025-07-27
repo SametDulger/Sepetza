@@ -6,6 +6,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
 # IDE files
 .vscode/
@@ -13,6 +14,14 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.vs/
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+*.sln.iml
 
 # Node.js
 node_modules/
@@ -21,6 +30,9 @@ yarn-debug.log*
 yarn-error.log*
 .npm
 .yarn-integrity
+.pnp
+.pnp.js
+.yarn/
 
 # .NET
 bin/
@@ -43,11 +55,29 @@ obj/
 *.wixpdb
 *.wixobj
 *.publishsettings
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.pubxml
+*.publishproj
+*.nupkg
+*.snupkg
+.nuget/
+**/packages/*
+!**/packages/build/
 
 # Database files
 *.db
 *.sqlite
 *.sqlite3
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+*.ndf
+
+# Entity Framework
+Migrations/
 
 # Environment files
 .env
@@ -55,31 +85,32 @@ obj/
 .env.development.local
 .env.test.local
 .env.production.local
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+!appsettings.Production.json
 
 # Build outputs
 dist/
 build/
 out/
 publish/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
 
-# Package files
-*.nupkg
-*.snupkg
-
-# Visual Studio
-.vs/
-*.vspscc
-*.vssscc
-.builds
-*.pidb
-*.svclog
-*.scc
-
-# Rider
-.idea/
-*.sln.iml
-
-# Coverage reports
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
 coverage/
 *.lcov
 
@@ -95,4 +126,77 @@ pids/
 
 # Temporary folders
 tmp/
-temp/ 
+temp/
+
+# Security
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*.cer
+*.der
+*.p7b
+*.p7c
+*.p7s
+*.p8
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# Local configuration
+local.settings.json
+secrets.json
+appsettings.Local.json
+
+# Performance and profiling
+*.perf
+*.prof
+*.trace
+
+# Crash dumps
+*.dmp
+*.mdmp
+
+# Memory dumps
+*.hprof
+
+# Application specific
+*.pid
+*.port
+*.sock
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes
+*.kubeconfig
+
+# AWS
+.aws/
+
+# Azure
+.azure/
+
+# Google Cloud
+.gcloud/
+
+# Local development
+.local/
+local/ 

@@ -36,7 +36,7 @@ export const Cart: React.FC = () => {
         price: item.product?.price || 0,
         discountPrice: item.product?.discountPrice,
         quantity: item.quantity,
-        image: getMainProductImage(item.product?.productImages),
+        image: getMainProductImage(item.product?.images),
         stockQuantity: item.product?.stockQuantity || 0
       }));
       

@@ -1,0 +1,110 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# C# files
+[*.cs]
+indent_size = 4
+charset = utf-8
+
+# C# project files
+[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
+indent_size = 2
+
+# C# solution files
+[*.sln]
+indent_size = 2
+
+# XML project files
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
+indent_size = 2
+
+# XML config files
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
+indent_size = 2
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# JavaScript/TypeScript files
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
+quote_type = single
+
+# CSS/SCSS files
+[*.{css,scss,sass}]
+indent_size = 2
+
+# HTML files
+[*.{html,htm}]
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# PowerShell files
+[*.ps1]
+indent_size = 4
+
+# Batch files
+[*.{cmd,bat}]
+end_of_line = crlf
+
+# Shell scripts
+[*.sh]
+end_of_line = lf
+
+# Package files
+[package.json]
+indent_size = 2
+
+# Configuration files
+[*.{config,ini}]
+indent_size = 2
+
+# Documentation
+[*.{txt,md,markdown}]
+trim_trailing_whitespace = false
+
+# Binary files
+[*.{png,jpg,jpeg,gif,ico,pdf,zip,rar,7z,exe,dll,pdb,so,dylib}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+# Database files
+[*.{db,sqlite,sqlite3,mdf,ldf}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+# Certificate files
+[*.{pem,key,crt,cer,pfx,p12}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset 

@@ -3,160 +3,123 @@ export interface User {
   firstName: string;
   lastName: string;
   email: string;
-  phoneNumber: string;
-  dateOfBirth?: string;
-  role: UserRole;
-  createdDate: string;
+  role: 'Customer' | 'Admin';
+  phoneNumber?: string;
+  isActive?: boolean;
 }
 
-export enum UserRole {
-  Customer = 0,
-  Admin = 1
+export interface AuthResponse {
+  token: string;
+  user: User;
+  expiresAt: Date;
+  success: boolean;
 }
 
-export interface Category {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  isActive: boolean;
-  displayOrder: number;
-  parentCategoryId?: number;
-  subCategories?: Category[];
+export interface ApiResponse<T = any> {
+  success: boolean;
+  data?: T;
+  message?: string;
+  errors?: any;
+}
+
+export interface PaginatedResponse<T> {
+  items: T[];
+  totalCount: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
 }
 
 export interface Product {
   id: number;
   name: string;
   description: string;
-  shortDescription: string;
+  shortDescription?: string;
   price: number;
+  originalPrice?: number;
   discountPrice?: number;
-  sku: string;
+  discountPercentage?: number;
   stockQuantity: number;
-  isActive: boolean;
-  isFeatured: boolean;
+  categoryId: number;
+  categoryName: string;
+  brand?: string;
+  dimensions?: string;
+  weight?: string;
+  images: string[];
+  productImages?: string[];
   rating: number;
   reviewCount: number;
-  brand: string;
-  weight: number;
-  dimensions: string;
-  categoryId: number;
-  category: Category;
-  productImages: ProductImage[];
-  reviews: Review[];
+  isActive: boolean;
+  isFeatured: boolean;
+  createdAt: string;
+  updatedAt: string;
 }
 
-export interface ProductImage {
+export interface Category {
   id: number;
-  imageUrl: string;
-  altText: string;
-  isMain: boolean;
-  displayOrder: number;
-  productId: number;
+  name: string;
+  description?: string;
+  parentId?: number;
+  parentCategoryId?: number;
+  isActive: boolean;
+  productCount: number;
+  subCategories?: Category[];
 }
 
 export interface CartItem {
   id: number;
-  quantity: number;
-  unitPrice: number;
-  userId: number;
   productId: number;
-  product: Product;
+  productName: string;
+  productImage: string;
+  price: number;
+  quantity: number;
+  totalPrice: number;
 }
 
 export interface Order {
   id: number;
   orderNumber: string;
   orderDate: string;
-  status: OrderStatus;
-  subTotal: number;
-  shippingCost: number;
-  taxAmount: number;
+  status: 'Pending' | 'Processing' | 'Shipped' | 'Delivered' | 'Cancelled' | 'Returned';
   totalAmount: number;
-  notes: string;
-  shippingFirstName: string;
-  shippingLastName: string;
-  shippingAddress: string;
-  shippingCity: string;
-  shippingState: string;
-  shippingZipCode: string;
-  shippingCountry: string;
-  shippingPhone: string;
-  userId: number;
-  orderItems: OrderItem[];
+  items: OrderItem[];
 }
 
 export interface OrderItem {
   id: number;
-  quantity: number;
-  unitPrice: number;
-  totalPrice: number;
-  orderId: number;
   productId: number;
-  product: Product;
-}
-
-export enum OrderStatus {
-  Pending = 0,
-  Processing = 1,
-  Shipped = 2,
-  Delivered = 3,
-  Cancelled = 4,
-  Returned = 5
+  productName: string;
+  quantity: number;
+  price: number;
+  totalPrice: number;
 }
 
 export interface Address {
   id: number;
-  title: string;
   firstName: string;
   lastName: string;
-  addressLine1: string;
-  addressLine2: string;
+  address: string;
   city: string;
   state: string;
   zipCode: string;
   country: string;
-  phoneNumber: string;
+  phone: string;
   isDefault: boolean;
-  userId: number;
 }
 
 export interface Review {
   id: number;
-  rating: number;
-  title: string;
-  comment: string;
-  isApproved: boolean;
-  userId: number;
   productId: number;
-  user: User;
-  createdDate: string;
+  userId: number;
+  userName: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
 }
 
-export interface LoginRequest {
-  email: string;
-  password: string;
-}
-
-export interface RegisterRequest {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  phoneNumber: string;
-}
-
-export interface AuthResponse {
-  token: string;
-  user: User;
-  expiresAt: string;
-  success?: boolean;
-}
-
-export interface ApiResponse<T> {
-  data: T;
-  success: boolean;
-  message: string;
-  errors?: string[];
+export interface Favorite {
+  id: number;
+  productId: number;
+  product: Product;
+  addedAt: string;
 } 

@@ -1,7 +1,8 @@
-import axios from 'axios';
+import axios, { InternalAxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 import { AuthResponse } from '../types';
+import config from '../config/environment';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5205/api';
+const API_BASE_URL = config.apiUrl;
 
 // Check if JWT token is expired
 const isTokenExpired = (token: string): boolean => {
@@ -60,7 +61,7 @@ const api = axios.create({
 
 // Request interceptor to add auth token and check expiration
 api.interceptors.request.use(
-  (config) => {
+  (config: InternalAxiosRequestConfig) => {
     const token = localStorage.getItem('token');
     if (token) {
       // Check if token is expired before making the request
@@ -68,19 +69,21 @@ api.interceptors.request.use(
         handleTokenExpiration();
         return Promise.reject(new Error('Token expired'));
       }
-      config.headers.Authorization = `Bearer ${token}`;
+      if (config.headers) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
     }
     return config;
   },
-  (error) => {
+  (error: AxiosError) => {
     return Promise.reject(error);
   }
 );
 
 // Response interceptor to handle auth errors
 api.interceptors.response.use(
-  (response) => response,
-  (error) => {
+  (response: AxiosResponse) => response,
+  (error: AxiosError) => {
     if (error.response?.status === 401) {
       handleTokenExpiration();
     }
@@ -93,13 +96,8 @@ export const authService = {
   login: async (email: string, password: string): Promise<AuthResponse> => {
     const response = await api.post('/auth/login', { email, password });
     
-    // Try different response structures
-    let authData;
-    if (response.data.data) {
-      authData = response.data.data;
-    } else {
-      authData = response.data;
-    }
+    // Standardize response structure
+    const authData = response.data.data || response.data;
     
     // Store token expiration info
     const token = authData.Token || authData.token;
@@ -129,7 +127,7 @@ export const authService = {
     phoneNumber: string;
   }): Promise<AuthResponse> => {
     const response = await api.post('/auth/register', userData);
-    const authData = response.data.data; // Backend returns data in 'data' field
+    const authData = response.data.data || response.data;
     
     // Store token expiration info
     if (authData.Token) {

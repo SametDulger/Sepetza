@@ -83,7 +83,9 @@ builder.Services.AddCors(options =>
         else
         {
             // Production: Sıkı güvenlik
-            policy.WithOrigins("https://yourdomain.com") // Production domain'inizi buraya yazın
+            var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>() ?? 
+                                new[] { "https://sepetza.com" };
+            policy.WithOrigins(allowedOrigins)
                   .WithHeaders("Content-Type", "Authorization", "Accept", "X-Requested-With")
                   .WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                   .AllowCredentials();

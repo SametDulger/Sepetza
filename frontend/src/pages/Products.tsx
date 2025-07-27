@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { Search, ChevronDown, ChevronRight, Grid3X3, List, ChevronLeft, Heart } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight, Grid, List, ChevronLeft, Heart } from 'lucide-react';
 import api, { cartService, authService } from '../services/api';
 import { Product, Category } from '../types';
 import { useToastContext } from '../contexts/ToastContext';
@@ -321,7 +321,7 @@ export const Products: React.FC = () => {
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Grid3X3 className="h-5 w-5" />
+                                              <Grid className="h-5 w-5" />
                   Kategoriler
                 </h3>
                 <button
@@ -489,7 +489,7 @@ export const Products: React.FC = () => {
                 <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
                   <div className="relative aspect-w-1 aspect-h-1 w-full h-48 bg-gray-200">
                     <img
-                      src={getMainProductImage(product.productImages)}
+                      src={getMainProductImage(product.images)}
                       alt={product.name}
                       className="w-full h-full object-cover"
                     />

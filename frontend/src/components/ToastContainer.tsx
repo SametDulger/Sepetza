@@ -10,7 +10,7 @@ interface ToastContainerProps {
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemoveToast }) => {
   return (
     <div className="fixed top-4 right-4 md:top-6 md:right-6 z-[9999] w-full max-w-sm md:max-w-md px-4 md:px-0 pointer-events-none">
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence>
         {toasts.map((toast, index) => (
           <motion.div
             key={toast.id}

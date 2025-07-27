@@ -347,7 +347,7 @@ function debounce(func: Function, wait: number) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 {isMenuOpen ? (
                   <motion.div
                     key="close"
