@@ -34,7 +34,7 @@ Modern ve kullanıcı dostu bir e-ticaret platformu. React ve .NET Core kullanı
 ## 🛠️ Teknolojiler
 
 ### Backend
-- **.NET 8** - Ana framework
+- **.NET 9** - Ana framework
 - **Entity Framework Core** - ORM
 - **SQLite** - Veritabanı
 - **JWT** - Kimlik doğrulama
@@ -53,7 +53,7 @@ Modern ve kullanıcı dostu bir e-ticaret platformu. React ve .NET Core kullanı
 ## 📦 Kurulum
 
 ### Gereksinimler
-- .NET 8 SDK
+- .NET 9 SDK
 - Node.js 18+
 - npm veya yarn
 
