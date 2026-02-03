@@ -200,12 +200,6 @@ API dokümantasyonu Swagger UI ile sağlanmaktadır:
 
 Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
 
-## 📞 İletişim
-
-- **Proje Sahibi:** [Your Name]
-- **Email:** [your.email@example.com]
-- **GitHub:** [https://github.com/yourusername]
-
 ## 🙏 Teşekkürler
 
 Bu projeyi geliştirirken kullanılan tüm açık kaynak kütüphanelere teşekkürler. 
