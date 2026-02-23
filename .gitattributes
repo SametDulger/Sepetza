@@ -1,4 +1,7 @@
 # Auto detect text files and perform LF normalization
+
+* linguist-language=C#
+
 * text=auto
 
 # C# source files
