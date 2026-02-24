@@ -128,6 +128,10 @@ builder.Services.AddRateLimiter(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// **Render dynamic port ayarı**
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5205";
+builder.WebHost.UseUrls($"http://*:{port}");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
