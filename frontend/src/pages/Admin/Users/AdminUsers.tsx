@@ -24,13 +24,21 @@ const AdminUsers: React.FC = () => {
   const [roleFilter, setRoleFilter] = useState<string>('');
   const navigate = useNavigate();
   const { showError, showSuccess } = useToastContext();
-
+  
+  const roleMap: Record<string, number> = {
+    'User': 0,
+    'Admin': 1
+  };
+  
   const fetchUsers = async (page = 1, search = '', role = '') => {
     try {
       setLoading(true);
       let url = `/admin/users?page=${page}&pageSize=10`;
       if (search) url += `&search=${encodeURIComponent(search)}`;
-      if (role) url += `&role=${role}`;
+      if (role) {
+      const roleValue = roleMap[role];
+      if (roleValue !== undefined) url += `&role=${roleValue}`;
+    }
       
       const response = await api.get(url);
       
@@ -198,8 +206,7 @@ const AdminUsers: React.FC = () => {
           />
           <select
             value={roleFilter}
-            onChange={handleRoleFilterChange}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={(e) => setRoleFilter(e.target.value)}
           >
             <option value="">Tüm Roller</option>
             <option value="User">Kullanıcı</option>
